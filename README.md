@@ -9,3 +9,4 @@
 最後，CSS代碼中的兩個關鍵幀（@keyframes）創建了動畫效果。"rotate"關鍵幀定義了loading__circle元素的旋轉動畫，使其繞著中心旋轉。"progress"關鍵幀定義了loading__bar元素的進度條動畫，讓圓形:before偽元素在進度條上移動。
 
 ## __開發者__
+- fantasywings123 
