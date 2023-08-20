@@ -1,12 +1,84 @@
-# __Loading Effect__
-這是一個的Loading視覺效果，使用了CSS來實現。當使用者在等待網頁載入或資料處理時，這個Loading效果可以提供一個等待提示，此效果包含一個旋轉的圓圈、進度條效果，帶有科技感的Loading效果。
+# Loading Effect
 
-## __代碼介紹__
-在HTML代碼中，我們可以看到一個class為"loading"的div，其中包含三個子div，分別是class為"loading__circle"、"loading__text"、"loading__bar"的元素。這些元素可以通過CSS進行樣式設置，以創建漂亮的效果。
+這是一個簡單的 HTML 頁面，用於展示一個簡單的「Loading...」效果。該效果包括一個旋轉的圓圈，以及一個顯示「Loading...」文字的元素。這個頁面適用於展示在網站加載時的等待效果。
 
-在CSS代碼中，我們可以看到對於整個網頁的樣式設置，包括背景顏色、邊距和填充。"loading"元素的樣式設置包括居中顯示和高度設置為整個視口高度。"__loading__circle"元素使用了border和box-shadow屬性來創建圓形邊框和陰影效果。"loading__text"元素設置了文字的樣式和位置。"loading__bar__"元素創建了一個進度條，其中:before為元素定義了一個藍色的圓形，它可以根據進度條的寬度移動。
+## 範例演示
 
-最後，CSS代碼中的兩個關鍵幀（@keyframes）創建了動畫效果。"rotate"關鍵幀定義了loading__circle元素的旋轉動畫，使其繞著中心旋轉。"progress"關鍵幀定義了loading__bar元素的進度條動畫，讓圓形:before偽元素在進度條上移動。
+<img src="pic/loading.gif" alt="示例GIF" width="500">
 
-## __開發者__
-- fantasywings123 
+## 使用方式
+
+1. 下載或複製 `index.html` 檔案到你的專案資料夾中。
+
+2. 將 CSS 樣式文件 `style.css` 放置在專案的 `../css/` 資料夾中，確保連結正確。
+
+3. 開啟 `index.html`，你將會看到一個展示 Loading 效果的頁面。
+
+## 樣式說明
+
+- `body` 元素設置了頁面的背景色，創建了一個深色背景。
+    ```css
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #0A0E14;
+    }
+    ```
+
+- `.loading` 類別設置了一個具有 flex 屬性的容器，將內容垂直和水平置中，並佔滿整個視窗高度。
+    ```css
+    .loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    ```
+
+- `.loading__circle` 類別定義了一個圓圈，具有旋轉的動畫效果，並且帶有藍色的邊框和陰影。
+    ```html
+    <div class="loading__circle"></div>
+    ```
+
+    ```css
+    .loading__circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #00BFFF;
+        border-top-color: transparent;
+        animation: rotate 1s linear infinite;
+        box-shadow: 0px 0px 50px #00BFFF;
+    }
+    ```
+
+- `.loading__text` 類別定義了「Loading...」文字的樣式，包括白色的顏色和粗體字。
+    ```html
+    <div class="loading__text">Loading...</div>
+    ```
+    ```css
+    .loading__text {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 16px;
+    }
+    ```
+## 適用場景
+
+這個頁面適用於以下情況：
+
+- 網站需要在加載時展示一個簡單的等待效果。
+
+- 你想為網站添加一個簡單的等待頁面，使用戶知道資料正在加載中。
+
+## 注意事項
+
+- 如果你想進一步自定義這個效果，你可以修改 `style.css` 文件中的樣式屬性。
+
+- 請確保將 `style.css` 放置在正確的路徑，以便連結正確的樣式。
+
+## 授權訊息
+
+這個程式遵循 [MIT 授權](LICENSE.txt)，你可以自由地使用、修改和分享這個程式。
