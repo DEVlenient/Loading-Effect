@@ -4,7 +4,7 @@
 
 ## 範例演示
 
-<img src="pic/loading.gif" alt="示例GIF" width="500">
+<img src="pic/loading.gif" width="500">
 
 ## 使用方式
 
